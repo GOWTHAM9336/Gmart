@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G Mart — Fresh Groceries, Delivered Daily</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="af-marquee" id="afMarquee">
+    <div class="af-marquee__track" id="afMarqueeTrack">
+      <span>🌿 Spices &amp; Seasonings to Packaged Products, Bakery, Beverages — we have it all!</span>
+      <span>🥕 Right from Fresh Fruits &amp; Vegetables, Rice &amp; Grains to Daily Essentials.</span>
+      <span>🚚 Free delivery on your first order — use code G-MART50</span>
+      <span>🌿 Spices &amp; Seasonings to Packaged Products, Bakery, Beverages — we have it all!</span>
+      <span>🥕 Right from Fresh Fruits &amp; Vegetables, Rice &amp; Grains to Daily Essentials.</span>
+      <span>🚚 Free delivery on your first order — use code G-MART50</span>
+    </div>
+  </div>
+
+  <div class="af-topbar">
+    <div class="af-wrap">
+      <div class="af-topbar__loc">📍 Delivering to <b>Meenambakkam, Chennai</b> — change area</div>
+      <div class="af-topbar__links">
+        <a href="#">Become a seller</a>
+        <a href="#">Track order</a>
+        <a href="#">Help</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="af-header">
+    <div class="af-wrap">
+      <a href="#top" class="af-logo">
+        <div class="af-logo__mark"><span>G</span></div>
+        <div class="af-logo__text">G Mart<small>Fresh for you, every day</small></div>
+      </a>
+
+      <form class="af-search" onsubmit="return false;">
+        <input type="text" placeholder="Search for rice, ghee, tomatoes, filter coffee…">
+        <button type="submit">Search</button>
+      </form>
+
+      <div class="af-header__actions">
+        <a href="#" class="af-iconbtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M20 21c0-3.5-3.5-6-8-6s-8 2.5-8 6"/><circle cx="12" cy="7" r="4"/></svg>
+          Account
+        </a>
+        <a href="javascript:void(0)" class="af-iconbtn af-cart" id="cartBtn">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+        <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 8H6"/>
+        <circle cx="9" cy="20" r="1.3"/>
+        <circle cx="18" cy="20" r="1.3"/>
+    </svg>
+
+    <span class="af-cart__count">0</span>
+
+    Cart
+</a>
+      </div>
+    </div>
+
+    
+  </header>
+
+  <nav class="af-catstrip">
+    <div class="af-wrap">
+      <a href="#" class="is-active">All categories</a>
+      <a href="#">Fresh Produce</a>
+      <a href="#">Rice &amp; Grains</a>
+      <a href="#">Spices &amp; Masalas</a>
+      <a href="#">Dairy &amp; Curd</a>
+      <a href="#">Snacks</a>
+      <a href="#">Tea &amp; Coffee</a>
+      <a href="#">Household</a>
+      <a href="#">Today's deals</a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="af-hero">
+      <div class="af-wrap">
+        <div>
+          <div class="af-hero__eyebrow">Delivered in 45 minutes</div>
+          <h1>Bring the <em>angadi</em><br>home, before the<br>filter coffee cools.</h1>
+          <p>Everything your local market carries — fresh produce, whole spices, dairy, and daily staples — sourced from nearby growers and packed the same morning.</p>
+          <div class="af-hero__cta">
+            <button class="af-btn af-btn--primary">Start shopping</button>
+            <button class="af-btn af-btn--ghost">See today's arrivals →</button>
+          </div>
+          <div class="af-hero__stats">
+            <div><b>4,200+</b><span>products stocked</span></div>
+            <div><b>45 min</b><span>average delivery</span></div>
+            <div><b>120+</b><span>partner farms</span></div>
+          </div>
+        </div>
+        <div class="af-crate">
+          <div class="af-tag"><b>₹129</b><span>this week's basket</span></div>
+          <div class="af-veg af-veg--leaf"></div>
+          <div class="af-veg af-veg--chili"></div>
+          <div class="af-veg af-veg--brinjal"></div>
+          <div class="af-veg af-veg--lemon"></div>
+          <div class="af-veg af-veg--tomato"></div>
+          <div class="af-crate__box"></div>
+        </div>
+      </div>
+
+      <svg class="af-awning" viewBox="0 0 1200 46" preserveAspectRatio="none">
+        <path class="af-awning__b" d="M0,0 H1200 V22 Q1150,46 1100,22 Q1050,-2 1000,22 Q950,46 900,22 Q850,-2 800,22 Q750,46 700,22 Q650,-2 600,22 Q550,46 500,22 Q450,-2 400,22 Q350,46 300,22 Q250,-2 200,22 Q150,46 100,22 Q50,-2 0,22 Z"/>
+        <path d="M0,0 H1200 V10 Q1150,28 1100,10 Q1050,-8 1000,10 Q950,28 900,10 Q850,-8 800,10 Q750,28 700,10 Q650,-8 600,10 Q550,28 500,10 Q450,-8 400,10 Q350,28 300,10 Q250,-8 200,10 Q150,28 100,10 Q50,-8 0,10 Z"/>
+      </svg>
+    </section>
+
+    <section class="af-section">
+      <div class="af-wrap">
+        <div class="af-section__head">
+          <div>
+            <h2>Shop by category</h2>
+            <p>From the produce corner to the spice rack — everything, sorted the way your kirana shop remembers it.</p>
+          </div>
+        </div>
+        <div class="af-catgrid">
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🍅</div><span>Fresh Produce</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🌾</div><span>Rice &amp; Grains</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🌶️</div><span>Spices &amp; Masalas</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🥛</div><span>Dairy &amp; Curd</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🥜</div><span>Snacks &amp; Namkeens</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">☕</div><span>Tea &amp; Coffee</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🧴</div><span>Household</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🧼</div><span>Personal Care</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="af-section" style="padding-top:0;">
+      <div class="af-wrap">
+        <div class="af-promo">
+          <div>
+            <h3>Harvest Week: <em>15% off</em> all fresh produce</h3>
+            <p>Straight from partner farms outside the city — picked Tuesday, on your table by Wednesday.</p>
+          </div>
+          <button class="af-btn af-btn--primary">Shop the harvest</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="af-section">
+      <div class="af-wrap">
+        <div class="af-section__head">
+          <div>
+            <h2>Today's angadi picks</h2>
+            <p>What our shoppers are reordering most this week.</p>
+          </div>
+          <a href="#" class="af-section__link">View all →</a>
+        </div>
+        <div class="af-prodgrid">
+
+          <div class="af-card">
+            <div class="af-card__punch"></div>
+            <div class="af-card__badge">-8%</div>
+            <div class="af-card__art" style="background:var(--curry-tint);">🍅</div>
+            <div class="af-card__cat">Fresh Produce</div>
+            <h4>Nattu Tomatoes</h4>
+            <div class="af-card__pack">1 kg, farm-picked</div>
+            <div class="af-card__row">
+              <div class="af-card__price"><b class="af-mono">₹42</b><s>₹46</s></div>
+              <button class="af-addbtn">Add</button>
+            </div>
+          </div>
+
+          <div class="af-card">
+            <div class="af-card__punch"></div>
+            <div class="af-card__art" style="background:#F2E7D2;">🌾</div>
+            <div class="af-card__cat">Rice &amp; Grains</div>
+            <h4>VillageMill Ponni Rice</h4>
+            <div class="af-card__pack">5 kg pack</div>
+            <div class="af-card__row">
+              <div class="af-card__price"><b class="af-mono">₹410</b></div>
+              <button class="af-addbtn">Add</button>
+            </div>
+          </div>
+
+          <div class="af-card">
+            <div class="af-card__punch"></div>
+            <div class="af-card__badge">New</div>
+            <div class="af-card__art" style="background:#F6E1D4;">☕</div>
+            <div class="af-card__cat">Tea &amp; Coffee</div>
+            <h4>Sundari Filter Coffee</h4>
+            <div class="af-card__pack">200 g, 80:20 blend</div>
+            <div class="af-card__row">
+              <div class="af-card__price"><b class="af-mono">₹185</b></div>
+              <button class="af-addbtn">Add</button>
+            </div>
+          </div>
+
+          <div class="af-card">
+            <div class="af-card__punch"></div>
+            <div class="af-card__art" style="background:#FCEFC9;">🧈</div>
+            <div class="af-card__cat">Dairy &amp; Curd</div>
+            <h4>Amudham Farm Ghee</h4>
+            <div class="af-card__pack">500 ml jar</div>
+            <div class="af-card__row">
+              <div class="af-card__price"><b class="af-mono">₹520</b><s>₹560</s></div>
+              <button class="af-addbtn">Add</button>
+            </div>
+          </div>
+
+          <div class="af-card">
+            <div class="af-card__punch"></div>
+            <div class="af-card__art" style="background:#F8DCD3;">🌶️</div>
+            <div class="af-card__cat">Spices &amp; Masalas</div>
+            <h4>Kadai Sambar Podi</h4>
+            <div class="af-card__pack">200 g, stone-ground</div>
+            <div class="af-card__row">
+              <div class="af-card__price"><b class="af-mono">₹95</b></div>
+              <button class="af-addbtn">Add</button>
+            </div>
+          </div>
+
+          <div class="af-card">
+            <div class="af-card__punch"></div>
+            <div class="af-card__art" style="background:#EFE3F0;">🍆</div>
+            <div class="af-card__cat">Fresh Produce</div>
+            <h4>Country Brinjal</h4>
+            <div class="af-card__pack">500 g</div>
+            <div class="af-card__row">
+              <div class="af-card__price"><b class="af-mono">₹28</b></div>
+              <button class="af-addbtn">Add</button>
+            </div>
+          </div>
+
+          <div class="af-card">
+            <div class="af-card__punch"></div>
+            <div class="af-card__badge">-12%</div>
+            <div class="af-card__art" style="background:#EDE6D6;">🥔</div>
+            <div class="af-card__cat">Snacks &amp; Namkeens</div>
+            <h4>Tirunelveli Halwa Mixture</h4>
+            <div class="af-card__pack">250 g</div>
+            <div class="af-card__row">
+              <div class="af-card__price"><b class="af-mono">₹75</b><s>₹85</s></div>
+              <button class="af-addbtn">Add</button>
+            </div>
+          </div>
+
+          <div class="af-card">
+            <div class="af-card__punch"></div>
+            <div class="af-card__art" style="background:#E4EEDB;">🥬</div>
+            <div class="af-card__cat">Fresh Produce</div>
+            <h4>Murungai Keerai Bunch</h4>
+            <div class="af-card__pack">1 bunch</div>
+            <div class="af-card__row">
+              <div class="af-card__price"><b class="af-mono">₹18</b></div>
+              <button class="af-addbtn">Add</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="af-section">
+      <div class="af-wrap">
+        <div class="af-trust">
+          <div class="af-trust__item">
+            <div class="af-icon">🌿</div>
+            <div><h5>Farm-direct produce</h5><p>Sourced from growers within 60 km, picked the day before delivery.</p></div>
+          </div>
+          <div class="af-trust__item">
+            <div class="af-icon">⏱️</div>
+            <div><h5>45-minute delivery</h5><p>Our nearest angadi hub packs and dispatches within the hour.</p></div>
+          </div>
+          <div class="af-trust__item">
+            <div class="af-icon">↩️</div>
+            <div><h5>No-fuss returns</h5><p>Not fresh enough? We replace or refund, no questions asked.</p></div>
+          </div>
+          <div class="af-trust__item">
+            <div class="af-icon">💵</div>
+            <div><h5>Pay on delivery</h5><p>Cash, card, or UPI — settle up when your order arrives.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="af-section">
+      <div class="af-wrap">
+        <div class="af-cta-block">
+          <div>
+            <h3>Get the app for faster reorders</h3>
+            <p>Save your usual list, track your delivery live, and get notified the moment your favourite variety is back in stock.</p>
+            <div class="af-appbtns">
+              <a href="#">▶ Google Play</a>
+              <a href="#"> App Store</a>
+            </div>
+          </div>
+          <div class="af-cta-block__art">
+            <div class="af-cta-block__phone">
+              <div class="af-cta-block__phone__screen">
+                <div></div><div></div><div></div><div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="af-footer">
+    <div class="af-wrap">
+      <div class="af-footer__grid">
+        <div class="af-footer__brand">
+          <div class="af-logo__text" style="color:var(--cream);">G Mart</div>
+          <p>Bringing the neighbourhood market online — fresh produce, daily staples, and everything in between, delivered from a hub near you.</p>
+        </div>
+        <div>
+          <h6>Shop</h6>
+          <ul>
+            <li><a href="#">Fresh Produce</a></li>
+            <li><a href="#">Rice &amp; Grains</a></li>
+            <li><a href="#">Spices &amp; Masalas</a></li>
+            <li><a href="#">Dairy &amp; Curd</a></li>
+            <li><a href="#">Today's deals</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6>Support</h6>
+          <ul>
+            <li><a href="#">Track your order</a></li>
+            <li><a href="#">Returns &amp; refunds</a></li>
+            <li><a href="#">Delivery areas</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6>Company</h6>
+          <ul>
+            <li><a href="#">About G Mart</a></li>
+            <li><a href="#">Partner farms</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Terms &amp; privacy</a></li>
+          </ul>
+        </div>
+
+
+      </div>
+      <div class="af-footer__bottom">
+        <span>© 2026 G Mart. All rights reserved.</span>
+        <span>Made for neighbourhoods, one crate at a time.</span>
+      </div>
+    </div>
+  </footer>
+
+
+
+ <script src="sript.js" defer></script>
+</body>
+</html>
