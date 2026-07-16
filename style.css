@@ -1135,3 +1135,26 @@ ul{
 .deal-next{
     right:5px;
 }
+
+/* Navbar */
+.navbar{
+    position: relative;
+    z-index: 9999;
+}
+
+/* Category Menu */
+.dropdown-menu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 260px;
+    background: #fff;
+    z-index: 10000;
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+}
+
+/* Banner Slider */
+.banner-slider{
+    position: relative;
+    z-index: 1;
+}
