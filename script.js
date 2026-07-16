@@ -353,3 +353,68 @@ function removeCartItem(index) {
     localStorage.setItem('gmart-cart', JSON.stringify(cart));
     showCart();
 }
+
+const track = document.querySelector(".deals-track");
+const cards = document.querySelectorAll(".deal-card");
+
+const nextBtn = document.querySelector(".deal-next");
+const prevBtn = document.querySelector(".deal-prev");
+
+let current = 0;
+const visible = 4;
+
+function moveSlider(){
+
+    track.style.transform =
+        `translateX(-${current*(100/visible)}%)`;
+
+}
+
+nextBtn.onclick = function(){
+
+    if(current < cards.length-visible){
+
+        current++;
+
+    }else{
+
+        current=0;
+
+    }
+
+    moveSlider();
+
+}
+
+prevBtn.onclick = function(){
+
+    if(current>0){
+
+        current--;
+
+    }else{
+
+        current=cards.length-visible;
+
+    }
+
+    moveSlider();
+
+}
+
+// Auto Slide Every 5 Seconds
+setInterval(function(){
+
+    if(current < cards.length-visible){
+
+        current++;
+
+    }else{
+
+        current=0;
+
+    }
+
+    moveSlider();
+
+},5000);

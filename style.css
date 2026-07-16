@@ -979,3 +979,159 @@ ul{
     font-size:20px;
 }
 
+.banner-slider{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin:20px auto;
+}
+
+.slider{
+    width:95%;
+    height:350px;          /* Small image height */
+    overflow:hidden;
+    position:relative;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.slides{
+    display:flex;
+    width:400%;
+    height:100%;
+    transition:transform .8s ease-in-out;
+}
+
+.slide{
+    width:25%;
+    height:353px;
+    flex-shrink:0;
+   
+}
+
+/* Buttons */
+
+.prev,
+.next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:rgba(0,0,0,.5);
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+    z-index:5;
+}
+
+.prev{
+    left:15px;
+}
+
+.next{
+    right:15px;
+}
+
+.prev:hover,
+.next:hover{
+    background:#2e7d32;
+}
+
+.deals-section{
+    width:95%;
+    margin:40px auto;
+}
+
+.deals-section h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+/* 4 Cards */
+
+.deals-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.deal-card{
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    text-align:center;
+    transition:.3s;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+}
+
+.deal-card:hover{
+    transform:translateY(-8px);
+}
+
+.deal-card img{
+    width:100%;
+    object-fit:cover;
+}
+
+.deal-card h4{
+    padding:15px;
+    font-size:22px;
+}
+
+.deals-slider{
+    width:95%;
+    margin:auto;
+    overflow:hidden;
+    position:relative;
+}
+
+.deals-track{
+    display:flex;
+    transition:.7s ease;
+}
+
+.deal-card{
+    min-width:25%;
+    padding:15px;
+    box-sizing:border-box;
+    text-align:center;
+}
+
+.deal-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.deal-card h4{
+    margin-top:10px;
+}
+
+.deal-prev,
+.deal-next{
+    position:absolute;
+    top:45%;
+    transform:translateY(-50%);
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:rgba(0,0,0,.5);
+    color:#fff;
+    cursor:pointer;
+    z-index:10;
+}
+
+.deal-prev{
+    left:5px;
+}
+
+.deal-next{
+    right:5px;
+}
