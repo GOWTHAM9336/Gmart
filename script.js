@@ -51,9 +51,24 @@ document.addEventListener('DOMContentLoaded', function () {
             <span class="af-qty-val">1</span>
             <span class="af-qty-btn count-up" data-action="increase">+</span>
           `;
-          
-          totalCartCount++;
-          updateCartBadge();
+          // Get product details from card
+const card = this.closest('.af-card');
+const name = card.querySelector('h4').innerText;
+const price = parseInt(
+  card.querySelector('.af-card__price b').innerText.replace('₹', '')
+);
+
+// Save item in cart array
+cart.push({
+  name,
+  price,
+  qty: 1
+});
+
+localStorage.setItem('gmart-cart', JSON.stringify(cart));
+
+totalCartCount++;
+updateCartBadge();
         }
       });
     });
@@ -137,3 +152,204 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 });
+
+// Global cart storage
+let cart = JSON.parse(localStorage.getItem("gmart-cart")) || [];
+const cartBtn = document.getElementById("cartBtn");
+
+const cartSidebar = document.getElementById("cartSidebar");
+
+const closeCart = document.getElementById("closeCart");
+
+cartBtn.addEventListener("click", () => {
+
+    cartSidebar.classList.add("active");
+
+    showCart();
+
+});
+
+closeCart.addEventListener("click", () => {
+
+    cartSidebar.classList.remove("active");
+
+});
+
+function showCart() {
+
+    const cartItems = document.getElementById("cartItems");
+    const total = document.getElementById("cartTotal");
+
+    if (!cartItems || !total) return;
+
+    cartItems.innerHTML = "";
+
+    let amount = 0;
+
+    if (cart.length === 0) {
+        cartItems.innerHTML = "<p>Your cart is empty.</p>";
+        total.innerHTML = "0";
+        return;
+    }
+
+    cart.forEach((item, index) => {
+        amount += item.price * item.qty;
+
+        cartItems.innerHTML += `
+        <div class="cart-item">
+            <div>
+                <b>${item.name}</b><br>
+                ₹${item.price} × ${item.qty}
+            </div>
+            <button onclick="removeCartItem(${index})">Remove</button>
+        </div>`;
+    });
+
+    total.innerHTML = amount;
+}
+
+const accountBtn=document.getElementById("accountBtn");
+const loginModal=document.getElementById("loginModal");
+const closeLogin=document.getElementById("closeLogin");
+
+const sendOtpBtn=document.getElementById("sendOtpBtn");
+const otpArea=document.getElementById("otpArea");
+
+let generatedOtp="";
+
+accountBtn.onclick=()=>{
+
+    loginModal.classList.add("show");
+
+}
+
+closeLogin.onclick=()=>{
+
+    loginModal.classList.remove("show");
+
+}
+
+sendOtpBtn.onclick=()=>{
+
+    const phone=document.getElementById("phone").value;
+
+    if(phone.length!=10){
+
+        alert("Enter valid mobile number");
+
+        return;
+
+    }
+
+    generatedOtp=Math.floor(100000+Math.random()*900000).toString();
+
+    alert("Demo OTP : "+generatedOtp);
+
+    otpArea.style.display="block";
+
+}
+
+document.getElementById("verifyOtp").onclick=()=>{
+
+    const otp=document.getElementById("otp").value;
+
+    if(otp===generatedOtp){
+
+        alert("Login Successful");
+
+        loginModal.classList.remove("show");
+
+    }else{
+
+        alert("Invalid OTP");
+
+    }
+
+}
+
+const categories=document.querySelectorAll(".category");
+const lists=document.querySelectorAll(".sub-list");
+
+categories.forEach(cat=>{
+
+    cat.addEventListener("mouseenter",()=>{
+
+        categories.forEach(c=>c.classList.remove("active"));
+
+        lists.forEach(l=>l.classList.remove("active"));
+
+        cat.classList.add("active");
+
+        document
+            .getElementById(cat.dataset.target)
+            .classList.add("active");
+
+    });
+
+});
+
+const slides = document.querySelectorAll(".slide");
+
+const next = document.querySelector(".next");
+
+const prev = document.querySelector(".prev");
+
+let index = 0;
+
+function showSlide(i){
+
+    slides.forEach(slide=>slide.classList.remove("active"));
+
+    slides[i].classList.add("active");
+
+}
+
+next.onclick = ()=>{
+
+    index++;
+
+    if(index>=slides.length){
+
+        index=0;
+
+    }
+
+    showSlide(index);
+
+}
+
+prev.onclick = ()=>{
+
+    index--;
+
+    if(index<0){
+
+        index=slides.length-1;
+
+    }
+
+    showSlide(index);
+
+}
+
+// Auto Slide Every 5 Seconds
+
+setInterval(()=>{
+
+    index++;
+
+    if(index>=slides.length){
+
+        index=0;
+
+    }
+
+    showSlide(index);
+
+},5000);
+
+function removeCartItem(index) {
+    cart.splice(index, 1);
+    localStorage.setItem('gmart-cart', JSON.stringify(cart));
+    showCart();
+}

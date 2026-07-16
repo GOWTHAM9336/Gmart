@@ -28,7 +28,7 @@
 
   <div class="af-topbar">
     <div class="af-wrap">
-      <div class="af-topbar__loc">📍 Delivering to <b>Meenambakkam, Chennai</b> — change area</div>
+      <div class="af-topbar__loc">📍 Delivering to <b>thippasamuthiram, vellore</b> — change area</div>
       <div class="af-topbar__links">
         <a href="#">Become a seller</a>
         <a href="#">Track order</a>
@@ -39,7 +39,7 @@
 
   <header class="af-header">
     <div class="af-wrap">
-      <a href="#top" class="af-logo">
+      <a href="logo.png" class="af-logo">
         <div class="af-logo__mark"><span>G</span></div>
         <div class="af-logo__text">G Mart<small>Fresh for you, every day</small></div>
       </a>
@@ -50,10 +50,13 @@
       </form>
 
       <div class="af-header__actions">
-        <a href="#" class="af-iconbtn">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M20 21c0-3.5-3.5-6-8-6s-8 2.5-8 6"/><circle cx="12" cy="7" r="4"/></svg>
-          Account
-        </a>
+       <a href="javascript:void(0)" class="af-iconbtn" id="accountBtn">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+        <path d="M20 21c0-3.5-3.5-6-8-6s-8 2.5-8 6"/>
+        <circle cx="12" cy="7" r="4"/>
+    </svg>
+    Account
+</a>
         <a href="javascript:void(0)" class="af-iconbtn af-cart" id="cartBtn">
     <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
         <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 8H6"/>
@@ -68,22 +71,217 @@
       </div>
     </div>
 
+    <div class="cart-sidebar" id="cartSidebar">
+
+    <div class="cart-header">
+        <h2>Shopping Cart</h2>
+
+        <button id="closeCart">✖</button>
+    </div>
+
+    <div id="cartItems">
+
+        <p>Your cart is empty.</p>
+
+    </div>
+
+    <div class="cart-footer">
+
+        <h3>Total :
+            ₹<span id="cartTotal">0</span>
+        </h3>
+
+        <button class="checkout-btn">
+            Checkout
+        </button>
+
+    </div>
+
+</div>
+
+<div class="login-modal" id="loginModal">
+
+    <div class="login-box">
+
+        <span class="close-login" id="closeLogin">&times;</span>
+
+        <h2>Sign in to your Account</h2>
+
+        <p>Login with OTP</p>
+
+        <div class="phone-box">
+
+            <span>+91</span>
+
+            <input
+                type="tel"
+                id="phone"
+                maxlength="10"
+                placeholder="Phone Number">
+
+        </div>
+
+        <button id="sendOtpBtn">
+            Generate OTP
+        </button>
+
+        <div id="otpArea" style="display:none;">
+
+            <input
+                type="text"
+                id="otp"
+                maxlength="6"
+                placeholder="Enter OTP">
+
+            <button id="verifyOtp">
+                Verify OTP
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
     
   </header>
+<nav class="navbar">
 
-  <nav class="af-catstrip">
-    <div class="af-wrap">
-      <a href="#" class="is-active">All categories</a>
-      <a href="#">Fresh Produce</a>
-      <a href="#">Rice &amp; Grains</a>
-      <a href="#">Spices &amp; Masalas</a>
-      <a href="#">Dairy &amp; Curd</a>
-      <a href="#">Snacks</a>
-      <a href="#">Tea &amp; Coffee</a>
-      <a href="#">Household</a>
-      <a href="#">Today's deals</a>
+    <ul class="menu">
+
+        <li><a href="index.html">Home</a></li>
+
+        <li class="dropdown">
+
+            <a href="#">Shop by Category ▼</a>
+
+            <div class="mega-menu">
+
+                <!-- Left Category List -->
+                <div class="category-list">
+
+                    <div class="category active" data-target="fruits">
+                        Exotic Fruits & Veg
+                    </div>
+
+                    <div class="category" data-target="dairy">
+                        Bread, Dairy & Eggs
+                    </div>
+
+                    <div class="category" data-target="atta">
+                        Atta & Flours
+                    </div>
+
+                    <div class="category" data-target="spices">
+                        Masala & Spices
+                    </div>
+
+                    <div class="category" data-target="oil">
+                        Oils & Ghee
+                    </div>
+
+                    <div class="category" data-target="rice">
+                        Rice & Dals
+                    </div>
+
+                    <div class="category" data-target="tea">
+                        Tea, Coffee & Drinks
+                    </div>
+
+                    <div class="category" data-target="dry">
+                        Dry Fruits
+                    </div>
+
+                </div>
+
+                <!-- Right Subcategory -->
+
+                <div class="subcategory">
+
+                    <div class="sub-list active" id="fruits">
+                        <a href="#">Fresh Fruits</a>
+                        <a href="#">Fresh Vegetables</a>
+                        <a href="#">Leafy Vegetables</a>
+                        <a href="#">Organic Fruits</a>
+                    </div>
+
+                    <div class="sub-list" id="dairy">
+                        <a href="#">Bread</a>
+                        <a href="#">Butter</a>
+                        <a href="#">Curd</a>
+                        <a href="#">Milk</a>
+                        <a href="#">Paneer</a>
+                        <a href="#">Eggs</a>
+                    </div>
+
+                    <div class="sub-list" id="atta">
+                        <a href="#">Wheat Flour</a>
+                        <a href="#">Rice Flour</a>
+                        <a href="#">Ragi Flour</a>
+                        <a href="#">Maida</a>
+                    </div>
+
+                    <div class="sub-list" id="spices">
+                        <a href="#">Chilli Powder</a>
+                        <a href="#">Turmeric</a>
+                        <a href="#">Pepper</a>
+                        <a href="#">Coriander</a>
+                    </div>
+
+                    <div class="sub-list" id="oil">
+                        <a href="#">Groundnut Oil</a>
+                        <a href="#">Sunflower Oil</a>
+                        <a href="#">Coconut Oil</a>
+                        <a href="#">Ghee</a>
+                    </div>
+
+                    <div class="sub-list" id="rice">
+                        <a href="#">Ponni Rice</a>
+                        <a href="#">Basmati Rice</a>
+                        <a href="#">Toor Dal</a>
+                        <a href="#">Urad Dal</a>
+                    </div>
+
+                    <div class="sub-list" id="tea">
+                        <a href="#">Tea</a>
+                        <a href="#">Coffee</a>
+                        <a href="#">Boost</a>
+                        <a href="#">Horlicks</a>
+                    </div>
+
+                    <div class="sub-list" id="dry">
+                        <a href="#">Cashew</a>
+                        <a href="#">Almond</a>
+                        <a href="#">Dates</a>
+                        <a href="#">Pista</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </li>
+
+        <li><a href="#">About Us</a></li>
+
+    </ul>
+
+</nav>
+
+<section class="banner-slider">
+
+    <div class="slider">
+
+        <img src="images/household.jpg" class="slide active">
+        <img src="images/nuts & seeds.jpg" class="slide">
+        <img src="images/rice.jpg" class="slide">
+        <img src="images/tea coffee.jpg" class="slide">
+
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+
     </div>
-  </nav>
+
+</section>
 
   <main id="top">
     <section class="af-hero">
@@ -359,6 +557,6 @@
 
 
 
- <script src="sript.js" defer></script>
+ <script src="script.js" defer></script>
 </body>
 </html>
