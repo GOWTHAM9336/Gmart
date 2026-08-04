@@ -28,7 +28,7 @@
 
   <div class="af-topbar">
     <div class="af-wrap">
-      <div class="af-topbar__loc">📍 Delivering to <b>thippasamuthiram, vellore</b> — change area</div>
+      <button type="button" class="af-topbar__loc">📍 Delivering to <b>thippasamuthiram, vellore</b> — choose your location</button>
       <div class="af-topbar__links">
         <a href="#">Become a seller</a>
         <a href="#">Track order</a>
@@ -39,8 +39,8 @@
 
   <header class="af-header">
     <div class="af-wrap">
-      <a href="logo.png" class="af-logo">
-        <div class="af-logo__mark"><span>G</span></div>
+      <a href="index.html" class="af-logo">
+        <div class="af-logo__mark"><img src="logo.png" alt="G Mart logo"></div>
         <div class="af-logo__text">G Mart<small>Fresh for you, every day</small></div>
       </a>
 
@@ -50,265 +50,250 @@
       </form>
 
       <div class="af-header__actions">
-       <a href="javascript:void(0)" class="af-iconbtn" id="accountBtn">
-    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
-        <path d="M20 21c0-3.5-3.5-6-8-6s-8 2.5-8 6"/>
-        <circle cx="12" cy="7" r="4"/>
-    </svg>
-    Account
-</a>
-        <a href="javascript:void(0)" class="af-iconbtn af-cart" id="cartBtn">
-    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
-        <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 8H6"/>
-        <circle cx="9" cy="20" r="1.3"/>
-        <circle cx="18" cy="20" r="1.3"/>
-    </svg>
-
-    <span class="af-cart__count">0</span>
-
-    Cart
-</a>
+        <button type="button" class="af-iconbtn" id="accountBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+            <path d="M20 21c0-3.5-3.5-6-8-6s-8 2.5-8 6"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          Login
+        </button>
+        <button type="button" class="af-iconbtn af-cart" id="cartBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
+            <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 8H6"/>
+            <circle cx="9" cy="20" r="1.3"/>
+            <circle cx="18" cy="20" r="1.3"/>
+          </svg>
+          <span class="af-cart__count">0</span>
+          Cart
+        </button>
       </div>
     </div>
 
     <div class="cart-sidebar" id="cartSidebar">
-
-    <div class="cart-header">
+      <div class="cart-header">
         <h2>Shopping Cart</h2>
-
         <button id="closeCart">✖</button>
-    </div>
+      </div>
 
-    <div id="cartItems">
-
+      <div id="cartItems">
         <p>Your cart is empty.</p>
+      </div>
 
+      <div class="cart-footer">
+        <h3>Total : ₹<span id="cartTotal">0</span></h3>
+        <button class="checkout-btn">Checkout</button>
+      </div>
     </div>
 
-    <div class="cart-footer">
-
-        <h3>Total :
-            ₹<span id="cartTotal">0</span>
-        </h3>
-
-        <button class="checkout-btn">
-            Checkout
-        </button>
-
-    </div>
-
-</div>
-
-<div class="login-modal" id="loginModal">
-
-    <div class="login-box">
-
+    <div class="login-modal" id="loginModal">
+      <div class="login-box">
         <span class="close-login" id="closeLogin">&times;</span>
-
         <h2>Sign in to your Account</h2>
-
         <p>Login with OTP</p>
 
         <div class="phone-box">
-
-            <span>+91</span>
-
-            <input
-                type="tel"
-                id="phone"
-                maxlength="10"
-                placeholder="Phone Number">
-
+          <span>+91</span>
+          <input type="tel" id="phone" maxlength="10" placeholder="Phone Number">
         </div>
 
-        <button id="sendOtpBtn">
-            Generate OTP
-        </button>
+        <button id="sendOtpBtn">Generate OTP</button>
 
         <div id="otpArea" style="display:none;">
-
-            <input
-                type="text"
-                id="otp"
-                maxlength="6"
-                placeholder="Enter OTP">
-
-            <button id="verifyOtp">
-                Verify OTP
-            </button>
-
+          <input type="text" id="otp" maxlength="6" placeholder="Enter OTP">
+          <button id="verifyOtp">Verify OTP</button>
         </div>
-
+      </div>
     </div>
-
-</div>
-    
   </header>
-<nav class="navbar">
 
+  <nav class="navbar">
     <ul class="menu">
+      <li><a href="index.html">Home</a></li>
 
-        <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Shop by Category ▼</a>
 
-        <li class="dropdown">
+        <div class="mega-menu">
+          <div class="category-list">
+            <div class="category active" data-target="fruits">Exotic Fruits &amp; Veg</div>
+            <div class="category" data-target="dairy">Bread, Dairy &amp; Eggs</div>
+            <div class="category" data-target="atta">Atta &amp; Flours</div>
+            <div class="category" data-target="spices">Masala &amp; Spices</div>
+            <div class="category" data-target="oil">Oils &amp; Ghee</div>
+            <div class="category" data-target="rice">Rice &amp; Dals</div>
+            <div class="category" data-target="tea">Tea, Coffee &amp; Health Drinks</div>
+            <div class="category" data-target="dry">Dry Fruits</div>
+            <div class="category" data-target="snacks">Snacks &amp; Chips</div>
+            <div class="category" data-target="household">Household Essentials</div>
+            <div class="category" data-target="beauty">Beauty &amp; Personal Care</div>
+            <div class="category" data-target="pooja">Pooja Needs</div>
+          </div>
 
-            <a href="#">Shop by Category ▼</a>
-
-            <div class="mega-menu">
-
-                <!-- Left Category List -->
-                <div class="category-list">
-
-                    <div class="category active" data-target="fruits">
-                        Exotic Fruits & Veg
-                    </div>
-
-                    <div class="category" data-target="dairy">
-                        Bread, Dairy & Eggs
-                    </div>
-
-                    <div class="category" data-target="atta">
-                        Atta & Flours
-                    </div>
-
-                    <div class="category" data-target="spices">
-                        Masala & Spices
-                    </div>
-
-                    <div class="category" data-target="oil">
-                        Oils & Ghee
-                    </div>
-
-                    <div class="category" data-target="rice">
-                        Rice & Dals
-                    </div>
-
-                    <div class="category" data-target="tea">
-                        Tea, Coffee & Drinks
-                    </div>
-
-                    <div class="category" data-target="dry">
-                        Dry Fruits
-                    </div>
-
-                </div>
-
-                <!-- Right Subcategory -->
-
-                <div class="subcategory">
-
-                    <div class="sub-list active" id="fruits">
-                        <a href="#">Fresh Fruits</a>
-                        <a href="#">Fresh Vegetables</a>
-                        <a href="#">Leafy Vegetables</a>
-                        <a href="#">Organic Fruits</a>
-                    </div>
-
-                    <div class="sub-list" id="dairy">
-                        <a href="#">Bread</a>
-                        <a href="#">Butter</a>
-                        <a href="#">Curd</a>
-                        <a href="#">Milk</a>
-                        <a href="#">Paneer</a>
-                        <a href="#">Eggs</a>
-                    </div>
-
-                    <div class="sub-list" id="atta">
-                        <a href="#">Wheat Flour</a>
-                        <a href="#">Rice Flour</a>
-                        <a href="#">Ragi Flour</a>
-                        <a href="#">Maida</a>
-                    </div>
-
-                    <div class="sub-list" id="spices">
-                        <a href="#">Chilli Powder</a>
-                        <a href="#">Turmeric</a>
-                        <a href="#">Pepper</a>
-                        <a href="#">Coriander</a>
-                    </div>
-
-                    <div class="sub-list" id="oil">
-                        <a href="#">Groundnut Oil</a>
-                        <a href="#">Sunflower Oil</a>
-                        <a href="#">Coconut Oil</a>
-                        <a href="#">Ghee</a>
-                    </div>
-
-                    <div class="sub-list" id="rice">
-                        <a href="#">Ponni Rice</a>
-                        <a href="#">Basmati Rice</a>
-                        <a href="#">Toor Dal</a>
-                        <a href="#">Urad Dal</a>
-                    </div>
-
-                    <div class="sub-list" id="tea">
-                        <a href="#">Tea</a>
-                        <a href="#">Coffee</a>
-                        <a href="#">Boost</a>
-                        <a href="#">Horlicks</a>
-                    </div>
-
-                    <div class="sub-list" id="dry">
-                        <a href="#">Cashew</a>
-                        <a href="#">Almond</a>
-                        <a href="#">Dates</a>
-                        <a href="#">Pista</a>
-                    </div>
-
-                </div>
-
+          <div class="subcategory">
+            <div class="sub-list active" id="fruits">
+              <a href="#">Fresh Fruits</a>
+              <a href="#">Fresh Vegetables</a>
+              <a href="#">Leafy Vegetables</a>
+              <a href="#">Organic Fruits</a>
             </div>
 
-        </li>
+            <div class="sub-list" id="dairy">
+              <a href="#">Bread</a>
+              <a href="#">Butter</a>
+              <a href="#">Curd</a>
+              <a href="#">Milk</a>
+              <a href="#">Paneer</a>
+              <a href="#">Eggs</a>
+            </div>
 
-        <li><a href="#">About Us</a></li>
+            <div class="sub-list" id="atta">
+              <a href="#">Wheat Flour</a>
+              <a href="#">Rice Flour</a>
+              <a href="#">Ragi Flour</a>
+              <a href="#">Maida</a>
+            </div>
 
+            <div class="sub-list" id="spices">
+              <a href="#">Chilli Powder</a>
+              <a href="#">Turmeric</a>
+              <a href="#">Pepper</a>
+              <a href="#">Coriander</a>
+            </div>
+
+            <div class="sub-list" id="oil">
+              <a href="#">Groundnut Oil</a>
+              <a href="#">Sunflower Oil</a>
+              <a href="#">Coconut Oil</a>
+              <a href="#">Ghee</a>
+            </div>
+
+            <div class="sub-list" id="rice">
+              <a href="#">Ponni Rice</a>
+              <a href="#">Basmati Rice</a>
+              <a href="#">Toor Dal</a>
+              <a href="#">Urad Dal</a>
+            </div>
+
+            <div class="sub-list" id="tea">
+              <a href="#">Tea</a>
+              <a href="#">Coffee</a>
+              <a href="#">Boost</a>
+              <a href="#">Horlicks</a>
+            </div>
+
+            <div class="sub-list" id="dry">
+              <a href="#">Cashew</a>
+              <a href="#">Almond</a>
+              <a href="#">Dates</a>
+              <a href="#">Pista</a>
+            </div>
+
+            <div class="sub-list" id="snacks">
+              <a href="#">Chips</a>
+              <a href="#">Namkeen</a>
+              <a href="#">Popcorn</a>
+              <a href="#">Roasted Snacks</a>
+            </div>
+
+            <div class="sub-list" id="household">
+              <a href="#">Detergents</a>
+              <a href="#">Cleaners</a>
+              <a href="#">Tissues</a>
+              <a href="#">Air Fresheners</a>
+            </div>
+
+            <div class="sub-list" id="beauty">
+              <a href="#">Skin Care</a>
+              <a href="#">Hair Care</a>
+              <a href="#">Bath &amp; Body</a>
+              <a href="#">Oral Care</a>
+            </div>
+
+            <div class="sub-list" id="pooja">
+              <a href="#">Agarbatti</a>
+              <a href="#">Camphor</a>
+              <a href="#">Lamps &amp; Wicks</a>
+              <a href="#">Pooja Oil</a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li><a href="#">Today's Deals</a></li>
+      <li><a href="#">About Us</a></li>
     </ul>
+  </nav>
 
-</nav>
-<section class="banner-slider">
-
-    <div class="slider">
-
+  <section class="banner-slider">
+    <div class="af-wrap">
+      <div class="slider">
         <div class="slides">
-
-            <img src="images/banner.png" class="slide">
-
+          <div class="slide slide--harvest">
+            <div class="slide__content">
+              <span class="slide__eyebrow">Harvest Week</span>
+              <h2>Fresh off the farm, <em>15% off</em> today</h2>
+              <p>Produce picked Tuesday from partner farms outside the city, on your table by Wednesday.</p>
+              <button class="af-btn af-btn--primary">Shop the harvest</button>
+            </div>
+            <div class="slide__deco"></div>
+          </div>
+          <div class="slide slide--app">
+            <div class="slide__content">
+              <span class="slide__eyebrow">G Mart App</span>
+              <h2>Reorder your <em>usual list</em> in one tap</h2>
+              <p>Download the app for live order tracking and stock alerts on your favourite items.</p>
+              <button class="af-btn af-btn--primary">Get the app</button>
+            </div>
+            <div class="slide__deco"></div>
+          </div>
         </div>
-
+        <button class="prev">‹</button>
+        <button class="next">›</button>
+        <div class="slider__dots">
+          <span class="active"></span>
+          <span></span>
+        </div>
+      </div>
     </div>
+  </section>
 
-</section>
+  <section class="deals-section">
+    <div class="af-wrap">
+      <h2>GMart Deals</h2>
+      <p class="deals-section__sub">This week's best value across your everyday staples.</p>
 
-<section class="deals-section">
-
-    <h2>GMART Deals</h2>
-
-    <div class="deals-grid">
-
-        <div class="deal-card">
-            <img src="images/pulse & dals.jpg" alt="">
-            <h4>GMART dals</h4>
+      <div class="deals-slider">
+        <div class="deals-track">
+          <div class="deal-card">
+            <div class="deal-card__art" style="background:#F2E7D2;">🍚</div>
+            <h4>GMart Rice</h4>
+          </div>
+          <div class="deal-card">
+            <div class="deal-card__art" style="background:var(--curry-tint);">🫘</div>
+            <h4>GMart Pulses &amp; Dals</h4>
+          </div>
+          <div class="deal-card">
+            <div class="deal-card__art" style="background:#FCEFC9;">🫗</div>
+            <h4>GMart Oil</h4>
+          </div>
+          <div class="deal-card">
+            <div class="deal-card__art" style="background:#F6E1D4;">🥜</div>
+            <h4>GMart Nuts &amp; Seeds</h4>
+          </div>
+          <div class="deal-card">
+            <div class="deal-card__art" style="background:#EFE3F0;">🥒</div>
+            <h4>GMart Pickles</h4>
+          </div>
+          <div class="deal-card">
+            <div class="deal-card__art" style="background:#F8DCD3;">🍟</div>
+            <h4>GMart Fryums</h4>
+          </div>
         </div>
-
-        <div class="deal-card">
-            <img src="images/nuts & seeds.jpg" alt="">
-            <h4>GMART nuts</h4>
-        </div>
-
-        <div class="deal-card">
-            <img src="images/rice.jpg" alt="">
-            <h4>GMART Rice</h4>
-        </div>
-
-        <div class="deal-card">
-            <img src="images/oil.jpg" alt="">
-            <h4>GMART oil</h4>
-        </div>
-
+        <button class="deal-prev">‹</button>
+        <button class="deal-next">›</button>
+      </div>
     </div>
-
-</section>
+  </section>
 
   <main id="top">
     <section class="af-hero">
@@ -348,19 +333,35 @@
       <div class="af-wrap">
         <div class="af-section__head">
           <div>
-            <h2>Shop by category</h2>
+            <h2>Explore categories</h2>
             <p>From the produce corner to the spice rack — everything, sorted the way your kirana shop remembers it.</p>
           </div>
         </div>
         <div class="af-catgrid">
-          <div class="af-catgrid__item"><div class="af-catgrid__badge">🍅</div><span>Fresh Produce</span></div>
-          <div class="af-catgrid__item"><div class="af-catgrid__badge">🌾</div><span>Rice &amp; Grains</span></div>
-          <div class="af-catgrid__item"><div class="af-catgrid__badge">🌶️</div><span>Spices &amp; Masalas</span></div>
-          <div class="af-catgrid__item"><div class="af-catgrid__badge">🥛</div><span>Dairy &amp; Curd</span></div>
-          <div class="af-catgrid__item"><div class="af-catgrid__badge">🥜</div><span>Snacks &amp; Namkeens</span></div>
-          <div class="af-catgrid__item"><div class="af-catgrid__badge">☕</div><span>Tea &amp; Coffee</span></div>
-          <div class="af-catgrid__item"><div class="af-catgrid__badge">🧴</div><span>Household</span></div>
-          <div class="af-catgrid__item"><div class="af-catgrid__badge">🧼</div><span>Personal Care</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🍎</div><span>Fresh Fruits</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🥦</div><span>Fresh Vegetables</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🥑</div><span>Exotic Fruits &amp; Veg</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🍗</div><span>Fresh Cuts</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🍞</div><span>Bread, Dairy &amp; Eggs</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🌾</div><span>Atta &amp; Flours</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🌶️</div><span>Masala &amp; Spices</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🧈</div><span>Oils &amp; Ghee</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🍚</div><span>Rice &amp; Dals</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🧂</div><span>Sugar &amp; Salt</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">☕</div><span>Tea, Coffee &amp; Health Drinks</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🥜</div><span>Dry Fruits</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🍟</div><span>Snacks &amp; Chips</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🧃</div><span>Drinks &amp; Juices</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🍪</div><span>Cookies &amp; Biscuits</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🍫</div><span>Chocolate &amp; Sweets</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🥣</div><span>Breakfast &amp; Readymixes</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🍱</div><span>Ready To Cook &amp; Eat</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🧽</div><span>Household Essentials</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🧴</div><span>Beauty &amp; Personal Care</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🪔</div><span>Pooja Needs</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🍰</div><span>Cakes &amp; Ice Cream</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">✏️</div><span>Stationery</span></div>
+          <div class="af-catgrid__item"><div class="af-catgrid__badge">🎁</div><span>Gifting Zone</span></div>
         </div>
       </div>
     </section>
@@ -541,40 +542,53 @@
     <div class="af-wrap">
       <div class="af-footer__grid">
         <div class="af-footer__brand">
-          <div class="af-logo__text" style="color:var(--cream);">G Mart</div>
-          <p>Bringing the neighbourhood market online — fresh produce, daily staples, and everything in between, delivered from a hub near you.</p>
+          <div class="af-logo__text">G Mart</div>
+          <p>G Mart is your neighbourhood's best food and grocery store online. With thousands of handpicked products in the catalogue, you'll find everything you're looking for.</p>
+          <div class="af-footer__social">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="YouTube">YT</a>
+            <a href="#" aria-label="LinkedIn">IN</a>
+          </div>
         </div>
+
         <div>
-          <h6>Shop</h6>
+          <h6>Quick Links</h6>
           <ul>
-            <li><a href="#">Fresh Produce</a></li>
-            <li><a href="#">Rice &amp; Grains</a></li>
-            <li><a href="#">Spices &amp; Masalas</a></li>
-            <li><a href="#">Dairy &amp; Curd</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Our Story</a></li>
             <li><a href="#">Today's deals</a></li>
-          </ul>
-        </div>
-        <div>
-          <h6>Support</h6>
-          <ul>
             <li><a href="#">Track your order</a></li>
-            <li><a href="#">Returns &amp; refunds</a></li>
-            <li><a href="#">Delivery areas</a></li>
-            <li><a href="#">Contact us</a></li>
           </ul>
         </div>
+
         <div>
-          <h6>Company</h6>
+          <h6>Contact Us</h6>
+          <address>
+            G Mart, Thippasamuthiram,<br>
+            Vellore, Tamil Nadu - 632001
+          </address>
           <ul>
-            <li><a href="#">About G Mart</a></li>
-            <li><a href="#">Partner farms</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Terms &amp; privacy</a></li>
+            <li><a href="mailto:info@gmart.in">info@gmart.in</a></li>
+            <li><a href="tel:9091600916">90916 00916</a></li>
           </ul>
         </div>
 
-
+        <div>
+          <h6>Policies</h6>
+          <ul>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Terms and Conditions</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
       </div>
+
+      <div class="af-footer__apps">
+        <a href="#" class="af-appbtns__link" style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(251,243,228,0.2);border-radius:10px;padding:10px 16px;font-size:13px;font-weight:600;">▶ Google Play</a>
+        <a href="#" style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(251,243,228,0.2);border-radius:10px;padding:10px 16px;font-size:13px;font-weight:600;"> App Store</a>
+      </div>
+
       <div class="af-footer__bottom">
         <span>© 2026 G Mart. All rights reserved.</span>
         <span>Made for neighbourhoods, one crate at a time.</span>
@@ -582,8 +596,6 @@
     </div>
   </footer>
 
-
-
- <script src="script.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
